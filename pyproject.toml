@@ -1,0 +1,25 @@
+[project]
+name = "gisnoc"
+version = "0.0.1"
+description = ""
+authors = [
+    {name = "Reza Handzalah",email = "rezahandzalah@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+]
+
+[tool.poetry]
+packages = [{include = "gisnoc", from = "src"}]
+
+
+[tool.poetry.group.test.dependencies]
+scipy = "^1.15.2"
+matplotlib = "^3.10.1"
+pooch = "^1.8.2"  # scipy.datasets
+numpy = "^2.2.5"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
