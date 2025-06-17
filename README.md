@@ -1,4 +1,3 @@
-## Development
-```
-poetry add --group test scipy
+```sh
+pip install git+https://github.com/tbmreza/pp200.git
 ```
