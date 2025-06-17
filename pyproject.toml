@@ -7,12 +7,7 @@ name = "pp200"
 version = "0.1.0"
 description = "From the creator of hh200"
 authors = [{name = "Reza", email = "rezahandzalah@gmail.com"}]
-dependencies = [
-    httpx
-  , loguru
-  , gevent
-  , hypothesis
-  ]
+dependencies = [httpx, loguru, gevent, hypothesis]
 
 [project.urls]
 Homepage = "https://github.com/tbmreza/pp200"
