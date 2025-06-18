@@ -191,6 +191,10 @@ class Flow:
                 return h(obj_body)
 
             match tup:
+                case ("json_d", obj_body):
+                    evaled = rec_fmt(obj_body)
+                    logger.info(f"evaled={evaled}")
+                    return [evaled]
                 case ("json", obj_body):
                     return rec_fmt(obj_body)
                 case ("form-data", d):
