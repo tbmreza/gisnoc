@@ -234,8 +234,11 @@ class Flow:
 
             for c in self.callables:
                 resp = send_requests_or_panic(c)
-                for var_name, json_dir in (c.flow_captures | c.flow_cmp).items():
-                    self.defined[agent_username][var_name] = extract_nested(resp, json_dir)
+                for var_name, var_value in (c.flow_captures | c.flow_cmp).items():
+                    if isinstance(var_value, list):
+                        self.defined[agent_username][var_name] = extract_nested(resp, var_value)
+                    else:
+                        self.defined[agent_username][var_name] = var_value
 
         return self
 
