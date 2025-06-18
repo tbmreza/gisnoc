@@ -96,7 +96,7 @@ def extract_nested(may_have_json, json_dir):
         json = may_have_json.json()
         return h(json_dir, json)
     except:
-        logger.info(may_have_json.json())
+        # ??: logger.info(may_have_json)
         return None
 
 
